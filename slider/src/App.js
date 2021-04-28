@@ -18,12 +18,15 @@ function App() {
       const {id, name, title, quote, image} = person;
 
       let position = 'nextSlide';
+
       if (index === personIndex) {
-        position = 'activeSlide'
+        position = 'activeSlide';
       }
+
       if (index-1 === personIndex || (index === 0 && personIndex === people.length -1)) {
-        position = 'lastSlide'
+        position = 'lastSlide';
       }
+      
       return <article key={id} className={position} >
         <img src={image} alt={name} className="person-img"/>
         <h4>{name}</h4>
